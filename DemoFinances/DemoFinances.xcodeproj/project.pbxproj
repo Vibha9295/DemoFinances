@@ -27,6 +27,9 @@
 		F34359ED2B7494F9002CD988 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359EC2B7494F9002CD988 /* DashboardPresenter.swift */; };
 		F34359F02B749562002CD988 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = F34359EF2B749562002CD988 /* DGCharts */; };
 		F34359F22B749562002CD988 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F34359F12B749562002CD988 /* DGChartsDynamic */; };
+		F34359F52B7495D1002CD988 /* Dashboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359F42B7495D1002CD988 /* Dashboard+Extensions.swift */; };
+		F34359F72B749630002CD988 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359F62B749630002CD988 /* DayAxisValueFormatter.swift */; };
+		F34359F92B749775002CD988 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359F82B749775002CD988 /* DashboardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		F34359E42B749428002CD988 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F34359E92B74949C002CD988 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		F34359EC2B7494F9002CD988 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		F34359F42B7495D1002CD988 /* Dashboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dashboard+Extensions.swift"; sourceTree = "<group>"; };
+		F34359F62B749630002CD988 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
+		F34359F82B749775002CD988 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +185,11 @@
 		F34359D92B7493B8002CD988 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F34359F32B7495BD002CD988 /* Helper */,
 				F34359EE2B74952C002CD988 /* Presenter */,
 				F34359DA2B7493D2002CD988 /* DashBoardVC.swift */,
 				F34359D72B7493B5002CD988 /* Model */,
+				F34359F82B749775002CD988 /* DashboardViewModel.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				F34359E92B74949C002CD988 /* CalendarCell.swift */,
+				F34359F62B749630002CD988 /* DayAxisValueFormatter.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,6 +228,14 @@
 				F34359EC2B7494F9002CD988 /* DashboardPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F34359F32B7495BD002CD988 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F34359F42B7495D1002CD988 /* Dashboard+Extensions.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,9 +386,12 @@
 				F30C2A3D2B748C040047F0C2 /* AppDelegate.swift in Sources */,
 				F34359ED2B7494F9002CD988 /* DashboardPresenter.swift in Sources */,
 				F34359DD2B7493E3002CD988 /* Date+Extensions.swift in Sources */,
+				F34359F52B7495D1002CD988 /* Dashboard+Extensions.swift in Sources */,
 				F34359E52B749428002CD988 /* APIService.swift in Sources */,
 				F30C2A3F2B748C040047F0C2 /* SceneDelegate.swift in Sources */,
+				F34359F72B749630002CD988 /* DayAxisValueFormatter.swift in Sources */,
 				F34359EA2B74949C002CD988 /* CalendarCell.swift in Sources */,
+				F34359F92B749775002CD988 /* DashboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
