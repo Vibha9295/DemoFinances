@@ -29,29 +29,27 @@ class APIService {
         task.resume()
     }
     func submitTransaction(_ transactionInput: TransactionInput, completion: @escaping (Bool) -> Void) {
-            // Replace this URL with your actual API endpoint for submitting transactions
-            let url = URL(string: "https://x8ki-letl-twmt.n7.xano.io/api:O8qF4MsJ/transactions")!
-
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-            do {
-                let jsonData = try JSONEncoder().encode(transactionInput)
-                request.httpBody = jsonData
-
-                URLSession.shared.dataTask(with: request) { data, response, error in
-                    if let _ = data {
-                        // Assuming your API returns a success response
-                        completion(true)
-                    } else {
-                        print("Error submitting transaction: \(error?.localizedDescription ?? "Unknown error")")
-                        completion(false)
-                    }
-                }.resume()
-            } catch {
-                print("Error encoding transaction input: \(error)")
-                completion(false)
-            }
+        guard let url = URL(string: apiEndpoint) else { return  }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+            let jsonData = try JSONEncoder().encode(transactionInput)
+            request.httpBody = jsonData
+            
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let _ = data {
+                    completion(true)
+                } else {
+                    print("Error submitting transaction: \(error?.localizedDescription ?? "Unknown error")")
+                    completion(false)
+                }
+            }.resume()
+        } catch {
+            print("Error encoding transaction input: \(error)")
+            completion(false)
         }
+    }
 }

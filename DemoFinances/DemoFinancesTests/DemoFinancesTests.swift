@@ -15,7 +15,7 @@ final class DemoFinancesTests: XCTestCase {
     var apiService: APIService!
     var viewModel: DashboardViewModel!
     var presenter: DashboardPresenter!
-
+    
     override func setUp() {
         super.setUp()
         
@@ -72,7 +72,7 @@ final class DemoFinancesTests: XCTestCase {
         let filteredBalance = viewModel.filterTransactions(transactions: allTransactions, type: .balance)
         XCTAssertEqual(filteredBalance.count, 1, "Filtering balance transactions failed")
     }
-
+    
     func testCalculateBalance() {
         let transactions = [
             TransactionElement(id: 1, createdAt: 1644310800, type: .income, amount: 100),
@@ -87,6 +87,6 @@ final class DemoFinancesTests: XCTestCase {
         XCTAssertEqual(balanceTransactions[1].amount, 50, "Incorrect balance amount for the second transaction")
         XCTAssertEqual(balanceTransactions[2].amount, 20, "Incorrect balance amount for the third transaction")
     }
-
-
+    
+    
 }

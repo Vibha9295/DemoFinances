@@ -200,6 +200,7 @@ class DashBoardVC: UIViewController {
         DispatchQueue.main.async {
             self.btnStartDate.setTitle(allStartDate.toString(format: "MMM dd, yyyy"), for: .normal)
             self.btnEndDate.setTitle(allEndDate.toString(format: "MMM dd, yyyy"), for: .normal)
+            print("Transaction - \(incomeTransactions), \(allStartDate),\(allEndDate)")
             
             // Show chart with all transactions
             self.updateChart(chartView: self.IncomeChartView ?? BarChartView(), transactions: incomeTransactions, type: .income, startDate: allStartDate, endDate: allEndDate)
@@ -209,7 +210,6 @@ class DashBoardVC: UIViewController {
     }
     
     func showChartData(incomeTransactions: [TransactionElement], expenseTransactions: [TransactionElement], balanceEntries: [TransactionElement]) {
-        // Update your UI components with the provided data
         updateChart(chartView: IncomeChartView ?? BarChartView(), transactions: incomeTransactions, type: .income, startDate: selectedStartDate ?? Date(), endDate: selectedEndDate ?? Date())
         updateChart(chartView: ExpansechartView ?? BarChartView(), transactions: expenseTransactions, type: .expense, startDate: selectedStartDate ?? Date(), endDate: selectedEndDate ?? Date())
         updateChart(chartView: BalancechartView ?? BarChartView(), transactions: balanceEntries, type: .balance, startDate: selectedStartDate ?? Date(), endDate: selectedEndDate ?? Date())
@@ -279,15 +279,15 @@ class DashBoardVC: UIViewController {
             }
             
             // Configure X-axis
-            // Configure X-axis
             let xAxis = chartView.xAxis
-            self.configureAxis(xAxis, withLabels: xAxisLabels, count: min(filteredTransactions.count, 7))
+            // self.configureAxis(xAxis, withLabels: xAxisLabels, count: min(filteredTransactions.count, 7))
             
+            self.configureAxis(xAxis, withLabels: xAxisLabels, count: 6)
             
             // Configure left axis
             let leftAxis = chartView.leftAxis
             let maxAmount = filteredTransactions.map { $0.amount }.max() ?? 0
-                self.configureLeftAxis(leftAxis, maxAmount: Double(maxAmount))
+            self.configureLeftAxis(leftAxis, maxAmount: Double(maxAmount))
             
             // Disable chart legend
             chartView.legend.enabled = false
@@ -301,14 +301,14 @@ class DashBoardVC: UIViewController {
         axis.labelPosition = .bottom
         axis.labelFont = .systemFont(ofSize: 10)
         axis.granularity = 1
-        axis.labelCount = 7
+        axis.labelCount = 6
         axis.valueFormatter = IndexAxisValueFormatter(values: labels)
         axis.drawGridLinesEnabled = false
     }
     
     func configureLeftAxis(_ axis: YAxis, maxAmount: Double) {
         axis.labelFont = .systemFont(ofSize: 10)
-        axis.labelCount = 7
+        axis.labelCount = 6
         axis.axisMinimum = 0
         axis.axisMaximum = maxAmount + 10
     }

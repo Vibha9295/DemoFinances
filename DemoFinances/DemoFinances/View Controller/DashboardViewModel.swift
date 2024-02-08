@@ -51,27 +51,4 @@ class DashboardViewModel {
         
         return balanceTransactions
     }
-
-
-//    func calculateBalance(transactions: [TransactionElement]) -> [TransactionElement] {
-//        var balanceTransactions: [TransactionElement] = []
-//        var runningBalance: Double = 0
-//        
-//        for transaction in transactions {
-//            let incomeAmount = transaction.type == .income ? transaction.amount : 0
-//            let expenseAmount = transaction.type == .expense ? transaction.amount : 0
-//            runningBalance = Double(incomeAmount - expenseAmount)
-//            
-//            let balanceTransaction = TransactionElement(
-//                id: Int(UUID().uuid.0),
-//                createdAt: transaction.createdAt,
-//                type: .balance,
-//                amount: Int(runningBalance)
-//            )
-//            
-//            balanceTransactions.append(balanceTransaction)
-//        }
-//        
-//        return balanceTransactions
-//    }
 }

@@ -21,7 +21,6 @@ class DashboardPresenter {
         }
     }
     func submitTransaction(_ transactionInput: TransactionInput, completion: @escaping (Bool) -> Void) {
-        // Use your API service to submit the transaction
         APIService.shared.submitTransaction(transactionInput) { success in
             completion(success)
         }
@@ -65,7 +64,6 @@ class DashboardPresenter {
         
         submitTransaction(transactionInput) { success in
             if success {
-                // Reload or update your data after a successful transaction
                 self.fetchData()
                 self.hideEntryPopup()
             } else {
