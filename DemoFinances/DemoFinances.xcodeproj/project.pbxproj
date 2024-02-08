@@ -17,6 +17,13 @@
 		F30C2A5E2B748C060047F0C2 /* DemoFinancesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C2A5D2B748C060047F0C2 /* DemoFinancesUITests.swift */; };
 		F30C2A602B748C060047F0C2 /* DemoFinancesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C2A5F2B748C060047F0C2 /* DemoFinancesUITestsLaunchTests.swift */; };
 		F34359D22B749364002CD988 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = F34359D12B749364002CD988 /* FSCalendar */; };
+		F34359DB2B7493D2002CD988 /* DashBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359DA2B7493D2002CD988 /* DashBoardVC.swift */; };
+		F34359DD2B7493E3002CD988 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359DC2B7493E3002CD988 /* Date+Extensions.swift */; };
+		F34359DF2B7493F7002CD988 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359DE2B7493F7002CD988 /* UIColor+Extensions.swift */; };
+		F34359E12B749401002CD988 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359E02B749401002CD988 /* UIView+Extensions.swift */; };
+		F34359E32B74940D002CD988 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359E22B74940D002CD988 /* TransactionModel.swift */; };
+		F34359E52B749428002CD988 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359E42B749428002CD988 /* APIService.swift */; };
+		F34359EA2B74949C002CD988 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359E92B74949C002CD988 /* CalendarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,13 @@
 		F30C2A592B748C060047F0C2 /* DemoFinancesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoFinancesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30C2A5D2B748C060047F0C2 /* DemoFinancesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFinancesUITests.swift; sourceTree = "<group>"; };
 		F30C2A5F2B748C060047F0C2 /* DemoFinancesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFinancesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F34359DA2B7493D2002CD988 /* DashBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardVC.swift; sourceTree = "<group>"; };
+		F34359DC2B7493E3002CD988 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		F34359DE2B7493F7002CD988 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F34359E02B749401002CD988 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		F34359E22B74940D002CD988 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		F34359E42B749428002CD988 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		F34359E92B74949C002CD988 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +115,14 @@
 		F30C2A3B2B748C040047F0C2 /* DemoFinances */ = {
 			isa = PBXGroup;
 			children = (
-				F30C2A3C2B748C040047F0C2 /* AppDelegate.swift */,
-				F30C2A3E2B748C040047F0C2 /* SceneDelegate.swift */,
+				F34359E82B749471002CD988 /* Supporting Files */,
+				F34359E72B74945E002CD988 /* Storyboard */,
+				F34359E62B749456002CD988 /* Resources */,
+				F34359D92B7493B8002CD988 /* View Controller */,
+				F34359D82B7493B6002CD988 /* Extensions */,
+				F34359D72B7493B5002CD988 /* Model */,
+				F34359D42B7493A8002CD988 /* Network */,
 				F30C2A402B748C040047F0C2 /* ViewController.swift */,
-				F30C2A422B748C040047F0C2 /* Main.storyboard */,
-				F30C2A452B748C060047F0C2 /* Assets.xcassets */,
-				F30C2A472B748C060047F0C2 /* LaunchScreen.storyboard */,
 				F30C2A4A2B748C060047F0C2 /* Info.plist */,
 			);
 			path = DemoFinances;
@@ -127,6 +143,67 @@
 				F30C2A5F2B748C060047F0C2 /* DemoFinancesUITestsLaunchTests.swift */,
 			);
 			path = DemoFinancesUITests;
+			sourceTree = "<group>";
+		};
+		F34359D42B7493A8002CD988 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F34359E42B749428002CD988 /* APIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F34359D72B7493B5002CD988 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F34359E22B74940D002CD988 /* TransactionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F34359D82B7493B6002CD988 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F34359DC2B7493E3002CD988 /* Date+Extensions.swift */,
+				F34359DE2B7493F7002CD988 /* UIColor+Extensions.swift */,
+				F34359E02B749401002CD988 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F34359D92B7493B8002CD988 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F34359DA2B7493D2002CD988 /* DashBoardVC.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		F34359E62B749456002CD988 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F30C2A3C2B748C040047F0C2 /* AppDelegate.swift */,
+				F30C2A3E2B748C040047F0C2 /* SceneDelegate.swift */,
+				F30C2A452B748C060047F0C2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F34359E72B74945E002CD988 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F30C2A422B748C040047F0C2 /* Main.storyboard */,
+				F30C2A472B748C060047F0C2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F34359E82B749471002CD988 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F34359E92B74949C002CD988 /* CalendarCell.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +344,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34359E32B74940D002CD988 /* TransactionModel.swift in Sources */,
+				F34359E12B749401002CD988 /* UIView+Extensions.swift in Sources */,
 				F30C2A412B748C040047F0C2 /* ViewController.swift in Sources */,
+				F34359DF2B7493F7002CD988 /* UIColor+Extensions.swift in Sources */,
+				F34359DB2B7493D2002CD988 /* DashBoardVC.swift in Sources */,
 				F30C2A3D2B748C040047F0C2 /* AppDelegate.swift in Sources */,
+				F34359DD2B7493E3002CD988 /* Date+Extensions.swift in Sources */,
+				F34359E52B749428002CD988 /* APIService.swift in Sources */,
 				F30C2A3F2B748C040047F0C2 /* SceneDelegate.swift in Sources */,
+				F34359EA2B74949C002CD988 /* CalendarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
