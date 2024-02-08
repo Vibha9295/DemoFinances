@@ -24,6 +24,9 @@
 		F34359E32B74940D002CD988 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359E22B74940D002CD988 /* TransactionModel.swift */; };
 		F34359E52B749428002CD988 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359E42B749428002CD988 /* APIService.swift */; };
 		F34359EA2B74949C002CD988 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359E92B74949C002CD988 /* CalendarCell.swift */; };
+		F34359ED2B7494F9002CD988 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34359EC2B7494F9002CD988 /* DashboardPresenter.swift */; };
+		F34359F02B749562002CD988 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = F34359EF2B749562002CD988 /* DGCharts */; };
+		F34359F22B749562002CD988 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F34359F12B749562002CD988 /* DGChartsDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,7 @@
 		F34359E22B74940D002CD988 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		F34359E42B749428002CD988 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F34359E92B74949C002CD988 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		F34359EC2B7494F9002CD988 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34359F02B749562002CD988 /* DGCharts in Frameworks */,
+				F34359F22B749562002CD988 /* DGChartsDynamic in Frameworks */,
 				F34359D22B749364002CD988 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,7 +126,6 @@
 				F34359E62B749456002CD988 /* Resources */,
 				F34359D92B7493B8002CD988 /* View Controller */,
 				F34359D82B7493B6002CD988 /* Extensions */,
-				F34359D72B7493B5002CD988 /* Model */,
 				F34359D42B7493A8002CD988 /* Network */,
 				F30C2A402B748C040047F0C2 /* ViewController.swift */,
 				F30C2A4A2B748C060047F0C2 /* Info.plist */,
@@ -174,7 +179,9 @@
 		F34359D92B7493B8002CD988 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F34359EE2B74952C002CD988 /* Presenter */,
 				F34359DA2B7493D2002CD988 /* DashBoardVC.swift */,
+				F34359D72B7493B5002CD988 /* Model */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -206,6 +213,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F34359EE2B74952C002CD988 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F34359EC2B7494F9002CD988 /* DashboardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +239,8 @@
 			name = DemoFinances;
 			packageProductDependencies = (
 				F34359D12B749364002CD988 /* FSCalendar */,
+				F34359EF2B749562002CD988 /* DGCharts */,
+				F34359F12B749562002CD988 /* DGChartsDynamic */,
 			);
 			productName = DemoFinances;
 			productReference = F30C2A392B748C040047F0C2 /* DemoFinances.app */;
@@ -350,6 +367,7 @@
 				F34359DF2B7493F7002CD988 /* UIColor+Extensions.swift in Sources */,
 				F34359DB2B7493D2002CD988 /* DashBoardVC.swift in Sources */,
 				F30C2A3D2B748C040047F0C2 /* AppDelegate.swift in Sources */,
+				F34359ED2B7494F9002CD988 /* DashboardPresenter.swift in Sources */,
 				F34359DD2B7493E3002CD988 /* Date+Extensions.swift in Sources */,
 				F34359E52B749428002CD988 /* APIService.swift in Sources */,
 				F30C2A3F2B748C040047F0C2 /* SceneDelegate.swift in Sources */,
@@ -719,6 +737,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F34359D02B749363002CD988 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		F34359EF2B749562002CD988 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DGCharts;
+		};
+		F34359F12B749562002CD988 /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DGChartsDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
