@@ -16,6 +16,7 @@
 		F30C2A542B748C060047F0C2 /* DemoFinancesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C2A532B748C060047F0C2 /* DemoFinancesTests.swift */; };
 		F30C2A5E2B748C060047F0C2 /* DemoFinancesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C2A5D2B748C060047F0C2 /* DemoFinancesUITests.swift */; };
 		F30C2A602B748C060047F0C2 /* DemoFinancesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C2A5F2B748C060047F0C2 /* DemoFinancesUITestsLaunchTests.swift */; };
+		F34359D22B749364002CD988 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = F34359D12B749364002CD988 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34359D22B749364002CD988 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = DemoFinances;
+			packageProductDependencies = (
+				F34359D12B749364002CD988 /* FSCalendar */,
+			);
 			productName = DemoFinances;
 			productReference = F30C2A392B748C040047F0C2 /* DemoFinances.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,10 @@
 				Base,
 			);
 			mainGroup = F30C2A302B748C040047F0C2;
+			packageReferences = (
+				F34359D02B749363002CD988 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				F34359D32B74936F002CD988 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = F30C2A3A2B748C040047F0C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -601,6 +610,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F34359D02B749363002CD988 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		F34359D32B74936F002CD988 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F34359D12B749364002CD988 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F34359D02B749363002CD988 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F30C2A312B748C040047F0C2 /* Project object */;
 }
